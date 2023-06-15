@@ -3,6 +3,8 @@ let tipInput = document.getElementById('tipInput')
 let numberOfPeople = document.getElementById('noofpeople')
 let perPersonTotal = document.getElementById('perpersontotal')
 let numpeople = numberOfPeople.innerText
+
+let adding = document.getElementById('adding')
 //adding
 //subing
 const calculateBill = () => {
@@ -15,5 +17,27 @@ const calculateBill = () => {
 
   perPersonTotal.innerText = `$${result.toLocaleString('en-US')}`
 }
+
+
+const increasePeople = () => {
+  numpeople=Number(numpeople)+1
+  numberOfPeople.innerText = numpeople
+  calculateBill()
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 billTotalInput.onkeyup = () => calculateBill()
 tipInput.onkeyup = () => calculateBill()
+adding.onclick = () => increasePeople()
