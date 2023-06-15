@@ -5,6 +5,7 @@ let perPersonTotal = document.getElementById('perpersontotal')
 let numpeople = numberOfPeople.innerText
 
 let adding = document.getElementById('adding')
+let subing = document.getElementById('subing')
 //adding
 //subing
 const calculateBill = () => {
@@ -26,7 +27,15 @@ const increasePeople = () => {
 }
 
 
-
+const decreasePeople = () => {
+  if (Number(numpeople)>1){
+    numpeople=Number(numpeople)-1
+    numberOfPeople.innerText = numpeople
+    calculateBill()
+  }else {
+    alert("can not have less then 1 person")
+  }
+}
 
 
 
@@ -41,3 +50,4 @@ const increasePeople = () => {
 billTotalInput.onkeyup = () => calculateBill()
 tipInput.onkeyup = () => calculateBill()
 adding.onclick = () => increasePeople()
+subing.onclick = () => decreasePeople()
