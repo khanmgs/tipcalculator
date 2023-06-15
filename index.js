@@ -34,6 +34,7 @@ const decreasePeople = () => {
     calculateBill()
   }else {
     alert("can not have less then 1 person")
+    return
   }
 }
 
