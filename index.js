@@ -16,3 +16,4 @@ const calculateBill = () => {
   perPersonTotal.innerText = `$${result.toLocaleString('en-US')}`
 }
 billTotalInput.onkeyup = () => calculateBill()
+tipInput.onkeyup = () => calculateBill()
